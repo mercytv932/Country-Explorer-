@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Country detail</title>
   </head>
   <body>
@@ -15,10 +21,15 @@
     </header>
 
     <main>
-      <div>
-        <input type="text" placeholder="Search for a country..." />
+      <divc class="inputAndFilter-div">
+        <input
+          type="text"
+          class="input"
+          placeholder="Search for a country..."
+        />
         <section class="filter-section">
           <select>
+            <option value="">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>
             <option value="asia">Asia</option>
@@ -26,7 +37,19 @@
             <option value="oceania">Oceania</option>
           </select>
         </section>
-      </div>
+      </divc>
+
+      <section class="country-cards">
+        <div>
+          <img src="https://flagcdn.com/w320/ax.png" alt="" />
+          <div class="info">
+            <h3>Åland Islands flag</h3>
+            <p>Population: 323,947.000</p>
+            <p>Region: Americas</p>
+            <p>Capital: Washington, D.C.</p>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
   <script></script>
