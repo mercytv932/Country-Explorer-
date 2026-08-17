@@ -8,10 +8,13 @@ fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
   .then((response) => response.json())
   .then((data) => {
     data.data.objects.forEach((countr) => {
+      if (!countr.flag.url_png) {
+        return;
+      }
       const countryCard = document.createElement("div");
       countryCard.className = "country-card";
       const img = document.createElement("img");
-      img.url = countr.flag.url_png;
+      img.src = countr.flag.url_png;
       img.alt = `${countr.names.common} flag`;
 
       const info = document.createElement("div");
@@ -22,8 +25,12 @@ fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
       const region = document.createElement("p");
       region.textContent = countr.region;
       const capital = document.createElement("p");
-      capital.textContent = countr.capital;
 
+      if (countr.capitals.length > 0) {
+        capital.textContent = countr.capitals[0].name;
+      } else {
+        capital.textContent = "No capital";
+      }
       info.appendChild(countryName);
       info.appendChild(population);
       info.appendChild(region);
@@ -31,7 +38,7 @@ fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
 
       countryCard.appendChild(img);
       countryCard.appendChild(info);
-
+      countryCards.appendChild(countryCard);
       console.log(countr.names.common);
       console.log(countr.population);
       console.log(countr.region);
