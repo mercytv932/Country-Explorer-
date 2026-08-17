@@ -21,13 +21,13 @@ fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
       const countryName = document.createElement("h3");
       countryName.textContent = countr.names.common;
       const population = document.createElement("p");
-      population.textContent = countr.population;
+      population.textContent = `Population: ${countr.population.toLocaleString()}`;
       const region = document.createElement("p");
-      region.textContent = countr.region;
+      region.textContent = `Region: ${countr.region}`;
       const capital = document.createElement("p");
 
       if (countr.capitals.length > 0) {
-        capital.textContent = countr.capitals[0].name;
+        capital.textContent = `Capital: ${countr.capitals[0].name}`;
       } else {
         capital.textContent = "No capital";
       }
