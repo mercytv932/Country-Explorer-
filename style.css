@@ -71,3 +71,8 @@ input {
 input:focus {
   outline: 2px solid black;
 }
+
+/* Cards container */
+.country-cards {
+  display: grid;
+}
