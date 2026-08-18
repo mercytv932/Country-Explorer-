@@ -1,3 +1,12 @@
+const countryImg = document.querySelector(".country-img");
+const countryNameElement = document.querySelector(".country-name");
+const countryPopulation = document.querySelector(".country-population");
+const countryRegion = document.querySelector(".country-region");
+const countrySubregion = document.querySelector(".country-subregion");
+const countryCapital = document.querySelector(".country-capital");
+const countryCurrency = document.querySelector(".country-currency");
+const countryLanguage = document.querySelector(".country-language");
+
 const API_KEY = "rc_live_b009c411a6c94840b5a6e4df783aa746";
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
@@ -21,6 +30,7 @@ function fetchCountryData(countryName) {
       const selectedCountry = data.data.objects.find((country) => {
         return country.names.common === countryName;
       });
+
       console.log(selectedCountry);
     });
 }
