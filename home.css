@@ -25,9 +25,22 @@ h1 {
   font-size: 2rem;
 }
 
-span {
+.toggle-dark {
   padding: 7px;
-  background-color: white;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+body.dark-mode header,
+body.dark-mode .country-card,
+body.dark-mode .input,
+body.dark-mode .filters {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
 }
 
 /* input and filter */

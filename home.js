@@ -1,6 +1,7 @@
 const input = document.querySelector(".input");
 const filters = document.querySelector(".filters");
 const countryCards = document.querySelector(".country-cards");
+const toggleDark = document.querySelector(".toggle-dark");
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 
@@ -76,4 +77,8 @@ filters.addEventListener("change", () => {
     });
     displayCountries(filtered);
   }
+});
+
+toggleDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });
