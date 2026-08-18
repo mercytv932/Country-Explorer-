@@ -23,6 +23,10 @@ function displayCountries(listCountries) {
     }
     const countryCard = document.createElement("div");
     countryCard.className = "country-card";
+    countryCard.addEventListener("click", () => {
+      console.log(country.names.common);
+      window.location.href = `details.html?country=${country.names.common}`;
+    });
     const img = document.createElement("img");
     img.src = country.flag.url_png;
     img.alt = `${country.names.common} flag`;
