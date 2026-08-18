@@ -22,28 +22,50 @@
 
       .placeHolder {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 0 40px;
+      }
+
+      .country-img {
+        width: 500px;
+        max-width: 100%;
       }
 
       .info {
         display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .info p {
+        margin: 0;
+      }
+
+      .country-name {
+        font-size: 32px;
+        margin-bottom: 20px;
       }
 
       .backBtn {
         background-color: white;
-        border: 2px solid gray;
-        padding: 0 20px;
-        font-size: 21px;
-        border-radius: 7px;
+        border: none;
+        padding: 10px 30px;
+        font-size: 16px;
+        border-radius: 6px;
         box-shadow:
           rgba(0, 0, 0, 0.16) 0px 3px 6px,
           rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        margin: 12px;
+        margin: 40px;
         cursor: pointer;
+        transition: 0.2s ease;
       }
 
-      .country-img {
-        width: 450px;
+      .backBtn:hover {
+        background-color: rgba(255, 255, 255, 0.034);
+        color: rgb(241, 53, 53);
       }
     </style>
   </head>
@@ -53,13 +75,14 @@
       <section class="placeHolder">
         <img src="" alt="" class="country-img" />
 
-        <div class="info"></div>
-        <h3 class="country-name"></h3>
-        <p class="country-population"></p>
-        <p class="country-region"></p>
-        <p class="country-subregion"></p>
-        <p class="country-capital"></p>
-        <p class="country-currency"></p>
+        <div class="info">
+          <h3 class="country-name"></h3>
+          <p class="country-population"></p>
+          <p class="country-region"></p>
+          <p class="country-subregion"></p>
+          <p class="country-capital"></p>
+          <p class="country-currency"></p>
+        </div>
       </section>
     </main>
     <script src="details.js"></script>

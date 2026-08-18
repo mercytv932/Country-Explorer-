@@ -27,6 +27,8 @@ function displayCountries(listCountries) {
       window.location.href = `details.html?country=${country.names.common}`;
     });
     const img = document.createElement("img");
+    img.classList.add("click-img");
+
     img.src = country.flag.url_png;
     img.alt = `${country.names.common} flag`;
 

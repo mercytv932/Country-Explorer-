@@ -99,3 +99,13 @@ input:focus {
   height: 160px;
   object-fit: cover;
 }
+
+.click-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.click-img:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
