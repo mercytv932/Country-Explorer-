@@ -1,7 +1,7 @@
 const input = document.querySelector(".input");
 const filters = document.querySelector(".filters");
 const countryCards = document.querySelector(".country-cards");
-const API_KEY = "rc_live_cca1d03ecf9741e083334ee5ab026287";
+const API_KEY = "rc_live_b009c411a6c94840b5a6e4df783aa746";
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 
@@ -9,8 +9,8 @@ let countriesData = [];
 fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
     countriesData = data.data.objects;
-
     displayCountries(countriesData);
   });
 
@@ -59,4 +59,16 @@ input.addEventListener("input", (e) => {
     return country.names.common.toLowerCase().includes(searchTerm);
   });
   displayCountries(filteredCountries);
+});
+
+filters.addEventListener("change", () => {
+  const selectedRegion = filters.value;
+  if (selectedRegion === "all") {
+    displayCountries(countriesData);
+  } else {
+    const filtered = countriesData.filter((country) => {
+      return country.region.toLowerCase() === selectedRegion.toLowerCase();
+    });
+    displayCountries(filtered);
+  }
 });
