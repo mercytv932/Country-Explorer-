@@ -1,7 +1,6 @@
 const input = document.querySelector(".input");
 const filters = document.querySelector(".filters");
 const countryCards = document.querySelector(".country-cards");
-const API_KEY = "rc_live_b009c411a6c94840b5a6e4df783aa746";
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 
