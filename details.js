@@ -6,6 +6,7 @@ const countrySubregion = document.querySelector(".country-subregion");
 const countryCapital = document.querySelector(".country-capital");
 const countryCurrency = document.querySelector(".country-currency");
 const backBtn = document.querySelector(".backBtn");
+const toggleDark = document.querySelector(".toggle-dark");
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 
@@ -43,4 +44,8 @@ function fetchCountryData(countryName) {
 
 backBtn.addEventListener("click", () => {
   window.location.href = "home.html";
+});
+
+toggleDark.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });
