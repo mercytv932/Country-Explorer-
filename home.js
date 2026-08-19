@@ -5,12 +5,14 @@ const toggleDark = document.querySelector(".toggle-dark");
 
 const BASE_URL = "https://api.restcountries.com/countries/v5";
 
+const API_KEY = "rc_live_81f6f755065441df84fee7bf38203fb6";
+
 let countriesData = [];
 fetch(BASE_URL, { headers: { Authorization: `Bearer ${API_KEY}` } })
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     countriesData = data.data.objects;
+    console.log(countriesData.length);
     displayCountries(countriesData);
   });
 

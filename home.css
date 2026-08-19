@@ -48,8 +48,9 @@ body.dark-mode .filters {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  padding: 0 60px;
+  margin: 45px auto;
+  padding: 0 40px;
+  max-width: 1800px;
 }
 
 select {
@@ -100,13 +101,22 @@ input:focus {
 .country-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 70px;
-  row-gap: 70px;
-  max-width: 1200px;
+  gap: 60px;
+  max-width: 1800px;
   margin: 50px auto;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
+.country-card {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgBA(0, 0, 0, 0.1);
+}
+
+.country-card div {
+  padding: 20px;
+}
 .country-cards img {
   width: 100%;
   height: 160px;

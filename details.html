@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="details.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,128 +11,6 @@
       rel="stylesheet"
     />
     <title>Countries of the world</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        font-family: "Nunito sans", sans-serif;
-        background-color: rgb(248, 244, 244);
-      }
-
-      header {
-        padding: 30px 25px;
-        background-color: hsl(0, 100%, 100%);
-      }
-      header div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .toggle-dark {
-        padding: 7px;
-        cursor: pointer;
-      }
-
-      body.dark-mode {
-        background-color: hsl(207, 26%, 17%);
-        color: white;
-      }
-
-      body.dark-mode header,
-      body.dark-mode .country-card,
-      body.dark-mode .input,
-      body.dark-mode .filters {
-        background-color: hsl(209, 23%, 22%);
-        color: white;
-      }
-
-      .placeHolder {
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        max-width: 1200px;
-        margin: 80px auto;
-        padding: 0 40px;
-      }
-
-      .country-img {
-        width: 500px;
-        max-width: 100%;
-      }
-
-      .info {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .info p {
-        margin: 0;
-      }
-
-      .country-name {
-        font-size: 32px;
-        margin-bottom: 20px;
-      }
-
-      .backBtn {
-        background-color: white;
-        border: none;
-        padding: 10px 30px;
-        font-size: 16px;
-        border-radius: 6px;
-        box-shadow:
-          rgba(0, 0, 0, 0.16) 0px 3px 6px,
-          rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        margin: 40px;
-        cursor: pointer;
-        transition: 0.2s ease;
-      }
-
-      .backBtn:hover {
-        background-color: rgba(255, 255, 255, 0.034);
-        color: rgb(241, 53, 53);
-      }
-
-      /* Media queries */
-      /* phones */
-
-      @media (max-width: 600px) {
-        .placeHolder {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 30px;
-          margin: 30px auto;
-          padding: 0 25px;
-        }
-
-        .country-img {
-          width: 100%;
-          height: auto;
-        }
-
-        .info {
-          width: 100%;
-        }
-
-        .country-name {
-          font-size: 26px;
-          margin-bottom: 15px;
-        }
-
-        .backBtn {
-          margin: 30px 25px;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
