@@ -3,7 +3,7 @@ const filters = document.querySelector(".filters");
 const countryCards = document.querySelector(".country-cards");
 const toggleDark = document.querySelector(".toggle-dark");
 
-const BASE_URL = "https://api.restcountries.com/countries/v5";
+const BASE_URL = "https://api.restcountries.com/countries/v5?limit=100";
 
 const API_KEY = "rc_live_81f6f755065441df84fee7bf38203fb6";
 
